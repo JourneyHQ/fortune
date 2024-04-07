@@ -1,4 +1,4 @@
-package dev.yuua
+package dev.yuua.fortune
 
 data class Config(
     val discord: String,

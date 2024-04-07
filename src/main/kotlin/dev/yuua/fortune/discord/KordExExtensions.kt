@@ -1,4 +1,4 @@
-package dev.yuua.discord
+package dev.yuua.fortune.discord
 
 import com.kotlindiscord.kord.extensions.commands.Arguments
 import com.kotlindiscord.kord.extensions.commands.application.slash.PublicSlashCommand
@@ -10,9 +10,7 @@ import com.kotlindiscord.kord.extensions.extensions.publicSlashCommand
 import com.kotlindiscord.kord.extensions.modules.unsafe.annotations.UnsafeAPI
 import com.kotlindiscord.kord.extensions.modules.unsafe.commands.UnsafeSlashCommand
 import com.kotlindiscord.kord.extensions.modules.unsafe.extensions.unsafeSlashCommand
-import dev.yuua.Fortune
-import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.toList
+import dev.yuua.fortune.Fortune
 
 typealias Options = Arguments
 

@@ -1,4 +1,4 @@
-package dev.yuua.discord.commands
+package dev.yuua.fortune.discord.commands
 
 import com.kotlindiscord.kord.extensions.commands.converters.impl.optionalString
 import com.kotlindiscord.kord.extensions.commands.converters.impl.string
@@ -8,11 +8,11 @@ import com.kotlindiscord.kord.extensions.modules.unsafe.types.InitialSlashComman
 import com.kotlindiscord.kord.extensions.utils.suggestStringCollection
 import dev.kord.core.behavior.interaction.respondEphemeral
 import dev.kord.core.behavior.interaction.respondPublic
-import dev.yuua.Fortune
-import dev.yuua.bcdice.BCDiceAPI
-import dev.yuua.ccfolia.CharacterData
-import dev.yuua.discord.Options
-import dev.yuua.discord.KordExExtensions.unsafeCommand
+import dev.yuua.fortune.Fortune
+import dev.yuua.fortune.bcdice.BCDiceAPI
+import dev.yuua.fortune.ccfolia.CharacterData
+import dev.yuua.fortune.discord.KordExExtensions.unsafeCommand
+import dev.yuua.fortune.discord.Options
 
 class RollCommand : Extension() {
     override val name = this::class.simpleName!!

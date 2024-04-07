@@ -1,9 +1,9 @@
-package dev.yuua.bcdice
+package dev.yuua.fortune.bcdice
 
-import dev.yuua.bcdice.types.GameSystemData
-import dev.yuua.bcdice.types.GameSystemInfoResponse
-import dev.yuua.bcdice.types.GetGameSystemResponse
-import dev.yuua.bcdice.types.RollResponse
+import dev.yuua.fortune.bcdice.types.GameSystemData
+import dev.yuua.fortune.bcdice.types.GameSystemInfoResponse
+import dev.yuua.fortune.bcdice.types.GetGameSystemResponse
+import dev.yuua.fortune.bcdice.types.RollResponse
 import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.engine.cio.*

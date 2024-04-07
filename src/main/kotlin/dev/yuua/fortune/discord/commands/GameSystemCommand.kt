@@ -1,13 +1,13 @@
-package dev.yuua.discord.commands
+package dev.yuua.fortune.discord.commands
 
 import com.kotlindiscord.kord.extensions.commands.converters.impl.optionalString
 import com.kotlindiscord.kord.extensions.commands.converters.impl.string
 import com.kotlindiscord.kord.extensions.extensions.Extension
-import dev.yuua.Fortune
-import dev.yuua.bcdice.BCDiceAPI
-import dev.yuua.discord.Options
-import dev.yuua.discord.KordExExtensions.publicSlashCommand
-import dev.yuua.discord.KordExExtensions.publicSubCommand
+import dev.yuua.fortune.Fortune
+import dev.yuua.fortune.bcdice.BCDiceAPI
+import dev.yuua.fortune.discord.KordExExtensions.publicSlashCommand
+import dev.yuua.fortune.discord.KordExExtensions.publicSubCommand
+import dev.yuua.fortune.discord.Options
 
 class GameSystemCommand : Extension() {
     override val name = this::class.simpleName!!

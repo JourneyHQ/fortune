@@ -1,4 +1,4 @@
-package dev.yuua.ccfolia
+package dev.yuua.fortune.ccfolia
 
 import com.kotlindiscord.kord.extensions.pagination.builders.PaginatorBuilder
 import dev.kord.common.Color

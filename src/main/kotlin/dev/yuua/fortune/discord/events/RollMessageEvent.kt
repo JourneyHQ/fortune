@@ -1,4 +1,4 @@
-package dev.yuua.discord.events
+package dev.yuua.fortune.discord.events
 
 import com.kotlindiscord.kord.extensions.checks.isNotBot
 import com.kotlindiscord.kord.extensions.extensions.Extension
@@ -7,9 +7,9 @@ import com.kotlindiscord.kord.extensions.utils.dm
 import com.kotlindiscord.kord.extensions.utils.getJumpUrl
 import dev.kord.core.behavior.reply
 import dev.kord.core.event.message.MessageCreateEvent
-import dev.yuua.Fortune
-import dev.yuua.bcdice.BCDiceAPI
-import dev.yuua.ccfolia.CharacterData
+import dev.yuua.fortune.Fortune
+import dev.yuua.fortune.bcdice.BCDiceAPI
+import dev.yuua.fortune.ccfolia.CharacterData
 
 class RollMessageEvent : Extension() {
     override val name = this::class.simpleName!!

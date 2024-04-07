@@ -1,4 +1,4 @@
-FROM azul/zulu-openjdk-alpine:17-latest as builder
+FROM azul/zulu-openjdk-alpine:21-latest as builder
 
 RUN apk add --no-cache git wget unzip
 
@@ -15,7 +15,7 @@ COPY src src
 
 RUN ./gradlew build
 
-FROM azul/zulu-openjdk-alpine:17-latest as runner
+FROM azul/zulu-openjdk-alpine:21-latest as runner
 
 WORKDIR /app
 
@@ -25,7 +25,7 @@ RUN apk add --update --no-cache tzdata && \
     echo "Asia/Tokyo" > /etc/timezone && \
     apk del tzdata
 
-COPY --from=builder /build/build/libs/vcspeaker-*.jar /app/vcspeaker-kt.jar
+COPY --from=builder /build/build/libs/fortune.jar /app/fortune.jar
 
 ENV TZ Asia/Tokyo
 

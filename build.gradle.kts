@@ -59,12 +59,12 @@ kotlin {
 }
 
 application {
-    mainClass.set("MainKt")
+    mainClass.set("dev.yuua.fortune.MainKt")
 }
 
 tasks.withType<Jar> {
     manifest {
-        attributes["Main-Class"] = "MainKt"
+        attributes["Main-Class"] = "dev.yuua.fortune.MainKt"
     }
 
     exclude("META-INF/*.RSA", "META-INF/*.SF", "META-INF/*.DSA")

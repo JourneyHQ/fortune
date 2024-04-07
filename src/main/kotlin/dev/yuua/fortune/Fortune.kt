@@ -1,4 +1,4 @@
-package dev.yuua
+package dev.yuua.fortune
 
 import com.kotlindiscord.kord.extensions.ExtensibleBot
 import com.kotlindiscord.kord.extensions.utils.FilterStrategy
@@ -6,8 +6,8 @@ import com.kotlindiscord.kord.extensions.utils.suggestStringMap
 import dev.kord.common.entity.Snowflake
 import dev.kord.core.entity.interaction.AutoCompleteInteraction
 import dev.kord.core.event.interaction.AutoCompleteInteractionCreateEvent
-import dev.yuua.bcdice.BCDiceAPI
-import dev.yuua.ccfolia.CharacterData
+import dev.yuua.fortune.bcdice.BCDiceAPI
+import dev.yuua.fortune.ccfolia.CharacterData
 import kotlinx.serialization.builtins.MapSerializer
 import kotlinx.serialization.builtins.serializer
 import kotlinx.serialization.json.Json

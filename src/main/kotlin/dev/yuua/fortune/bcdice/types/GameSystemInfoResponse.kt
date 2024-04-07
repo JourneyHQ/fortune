@@ -1,4 +1,4 @@
-package dev.yuua.bcdice.types
+package dev.yuua.fortune.bcdice.types
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

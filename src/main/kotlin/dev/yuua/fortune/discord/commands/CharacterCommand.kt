@@ -1,4 +1,4 @@
-package dev.yuua.discord.commands
+package dev.yuua.fortune.discord.commands
 
 import com.kotlindiscord.kord.extensions.annotations.AlwaysPublicResponse
 import com.kotlindiscord.kord.extensions.annotations.DoNotChain
@@ -9,12 +9,12 @@ import com.kotlindiscord.kord.extensions.utils.FilterStrategy
 import com.kotlindiscord.kord.extensions.utils.removeNickname
 import com.kotlindiscord.kord.extensions.utils.setNickname
 import com.kotlindiscord.kord.extensions.utils.suggestStringMap
-import dev.yuua.Fortune
-import dev.yuua.bcdice.BCDiceAPI
-import dev.yuua.ccfolia.Character
-import dev.yuua.discord.Options
-import dev.yuua.discord.KordExExtensions.publicSlashCommand
-import dev.yuua.discord.KordExExtensions.publicSubCommand
+import dev.yuua.fortune.Fortune
+import dev.yuua.fortune.bcdice.BCDiceAPI
+import dev.yuua.fortune.ccfolia.Character
+import dev.yuua.fortune.discord.KordExExtensions.publicSlashCommand
+import dev.yuua.fortune.discord.KordExExtensions.publicSubCommand
+import dev.yuua.fortune.discord.Options
 import kotlinx.serialization.json.Json
 
 class CharacterCommand : Extension() {
