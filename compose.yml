@@ -5,3 +5,4 @@ services:
       - ./data:/app/data
       - ./config:/app/config
     init: true
+    restart: always
