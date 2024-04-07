@@ -15,12 +15,9 @@ import dev.yuua.fortune.Fortune
 typealias Options = Arguments
 
 object KordExExtensions {
-    private suspend fun SlashCommand<*, *, *>.setGuilds() {
+    private fun SlashCommand<*, *, *>.setGuilds() {
         val devGuildId = Fortune.config.devGuild?.toLong()
         if (devGuildId != null) guild(devGuildId)
-        else Fortune.bot.kordRef.guilds.collect {
-            guild(it.id)
-        }
     }
 
     // Command Extension Functions
