@@ -1,6 +1,6 @@
 package dev.yuua.fortune.ccfolia
 
-import com.kotlindiscord.kord.extensions.pagination.builders.PaginatorBuilder
+import dev.kordex.core.pagination.builders.PaginatorBuilder
 import dev.kord.common.Color
 import kotlinx.serialization.Serializable
 

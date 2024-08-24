@@ -1,10 +1,10 @@
 package dev.yuua.fortune.discord.events
 
-import com.kotlindiscord.kord.extensions.checks.isNotBot
-import com.kotlindiscord.kord.extensions.extensions.Extension
-import com.kotlindiscord.kord.extensions.extensions.event
-import com.kotlindiscord.kord.extensions.utils.dm
-import com.kotlindiscord.kord.extensions.utils.getJumpUrl
+import dev.kordex.core.checks.isNotBot
+import dev.kordex.core.extensions.Extension
+import dev.kordex.core.extensions.event
+import dev.kordex.core.utils.dm
+import dev.kordex.core.utils.getJumpUrl
 import dev.kord.core.behavior.reply
 import dev.kord.core.event.message.MessageCreateEvent
 import dev.yuua.fortune.Fortune

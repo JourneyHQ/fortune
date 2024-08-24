@@ -1,13 +1,13 @@
 package dev.yuua.fortune.discord.commands
 
-import com.kotlindiscord.kord.extensions.commands.converters.impl.optionalString
-import com.kotlindiscord.kord.extensions.commands.converters.impl.string
-import com.kotlindiscord.kord.extensions.extensions.Extension
-import com.kotlindiscord.kord.extensions.modules.unsafe.annotations.UnsafeAPI
-import com.kotlindiscord.kord.extensions.modules.unsafe.types.InitialSlashCommandResponse
-import com.kotlindiscord.kord.extensions.utils.suggestStringCollection
+import dev.kordex.core.commands.converters.impl.optionalString
+import dev.kordex.core.commands.converters.impl.string
+import dev.kordex.core.extensions.Extension
+import dev.kordex.modules.dev.unsafe.annotations.UnsafeAPI
+import dev.kordex.core.utils.suggestStringCollection
 import dev.kord.core.behavior.interaction.respondEphemeral
 import dev.kord.core.behavior.interaction.respondPublic
+import dev.kordex.modules.dev.unsafe.commands.slash.InitialSlashCommandResponse
 import dev.yuua.fortune.Fortune
 import dev.yuua.fortune.bcdice.BCDiceAPI
 import dev.yuua.fortune.ccfolia.CharacterData

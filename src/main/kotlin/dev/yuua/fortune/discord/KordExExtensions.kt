@@ -1,22 +1,26 @@
 package dev.yuua.fortune.discord
 
-import com.kotlindiscord.kord.extensions.commands.Arguments
-import com.kotlindiscord.kord.extensions.commands.application.slash.PublicSlashCommand
-import com.kotlindiscord.kord.extensions.commands.application.slash.SlashCommand
-import com.kotlindiscord.kord.extensions.commands.application.slash.publicSubCommand
-import com.kotlindiscord.kord.extensions.components.forms.ModalForm
-import com.kotlindiscord.kord.extensions.extensions.Extension
-import com.kotlindiscord.kord.extensions.extensions.publicSlashCommand
-import com.kotlindiscord.kord.extensions.modules.unsafe.annotations.UnsafeAPI
-import com.kotlindiscord.kord.extensions.modules.unsafe.commands.UnsafeSlashCommand
-import com.kotlindiscord.kord.extensions.modules.unsafe.extensions.unsafeSlashCommand
+import dev.kord.common.entity.Snowflake
+import dev.kordex.core.commands.Arguments
+import dev.kordex.core.commands.application.slash.PublicSlashCommand
+import dev.kordex.core.commands.application.slash.SlashCommand
+import dev.kordex.core.commands.application.slash.publicSubCommand
+import dev.kordex.core.components.forms.ModalForm
+import dev.kordex.modules.dev.unsafe.components.forms.UnsafeModalForm
+import dev.kordex.core.extensions.Extension
+import dev.kordex.core.extensions.publicSlashCommand
+import dev.kordex.modules.dev.unsafe.annotations.UnsafeAPI
+import dev.kordex.modules.dev.unsafe.commands.slash.UnsafeSlashCommand
+import dev.kordex.modules.dev.unsafe.extensions.unsafeSlashCommand
 import dev.yuua.fortune.Fortune
 
 typealias Options = Arguments
 
 object KordExExtensions {
+    private fun String.toSnowflake() = Snowflake(this)
+
     private fun SlashCommand<*, *, *>.setGuilds() {
-        val devGuildId = Fortune.config.devGuild?.toLong()
+        val devGuildId = Fortune.config.devGuild?.toSnowflake()
         if (devGuildId != null) guild(devGuildId)
     }
 
@@ -157,7 +161,7 @@ object KordExExtensions {
         name: String,
         description: String,
         options: () -> O,
-        builder: suspend UnsafeSlashCommand<O, ModalForm>.() -> Unit
+        builder: suspend UnsafeSlashCommand<O, UnsafeModalForm>.() -> Unit
     ) {
         unsafeSlashCommand(options) {
             this.name = if (Fortune.isDev()) "dev-$name" else name
@@ -173,7 +177,7 @@ object KordExExtensions {
     suspend fun Extension.unsafeCommand(
         name: String,
         description: String,
-        builder: suspend UnsafeSlashCommand<Options, ModalForm>.() -> Unit
+        builder: suspend UnsafeSlashCommand<Options, UnsafeModalForm>.() -> Unit
     ) {
         unsafeSlashCommand {
             this.name = if (Fortune.isDev()) "dev-$name" else name

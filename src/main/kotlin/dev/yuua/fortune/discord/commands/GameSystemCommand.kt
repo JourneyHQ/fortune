@@ -1,8 +1,8 @@
 package dev.yuua.fortune.discord.commands
 
-import com.kotlindiscord.kord.extensions.commands.converters.impl.optionalString
-import com.kotlindiscord.kord.extensions.commands.converters.impl.string
-import com.kotlindiscord.kord.extensions.extensions.Extension
+import dev.kordex.core.commands.converters.impl.optionalString
+import dev.kordex.core.commands.converters.impl.string
+import dev.kordex.core.extensions.Extension
 import dev.yuua.fortune.Fortune
 import dev.yuua.fortune.bcdice.BCDiceAPI
 import dev.yuua.fortune.discord.KordExExtensions.publicSlashCommand

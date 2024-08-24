@@ -1,14 +1,14 @@
 package dev.yuua.fortune.discord.commands
 
-import com.kotlindiscord.kord.extensions.annotations.AlwaysPublicResponse
-import com.kotlindiscord.kord.extensions.annotations.DoNotChain
-import com.kotlindiscord.kord.extensions.commands.converters.impl.string
-import com.kotlindiscord.kord.extensions.components.forms.ModalForm
-import com.kotlindiscord.kord.extensions.extensions.Extension
-import com.kotlindiscord.kord.extensions.utils.FilterStrategy
-import com.kotlindiscord.kord.extensions.utils.removeNickname
-import com.kotlindiscord.kord.extensions.utils.setNickname
-import com.kotlindiscord.kord.extensions.utils.suggestStringMap
+import dev.kordex.core.annotations.AlwaysPublicResponse
+import dev.kordex.core.annotations.DoNotChain
+import dev.kordex.core.commands.converters.impl.string
+import dev.kordex.core.components.forms.ModalForm
+import dev.kordex.core.extensions.Extension
+import dev.kordex.core.utils.FilterStrategy
+import dev.kordex.core.utils.removeNickname
+import dev.kordex.core.utils.setNickname
+import dev.kordex.core.utils.suggestStringMap
 import dev.yuua.fortune.Fortune
 import dev.yuua.fortune.bcdice.BCDiceAPI
 import dev.yuua.fortune.ccfolia.Character

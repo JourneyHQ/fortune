@@ -1,8 +1,8 @@
 package dev.yuua.fortune
 
-import com.kotlindiscord.kord.extensions.ExtensibleBot
-import com.kotlindiscord.kord.extensions.utils.FilterStrategy
-import com.kotlindiscord.kord.extensions.utils.suggestStringMap
+import dev.kordex.core.ExtensibleBot
+import dev.kordex.core.utils.FilterStrategy
+import dev.kordex.core.utils.suggestStringMap
 import dev.kord.common.entity.Snowflake
 import dev.kord.core.entity.interaction.AutoCompleteInteraction
 import dev.kord.core.event.interaction.AutoCompleteInteractionCreateEvent

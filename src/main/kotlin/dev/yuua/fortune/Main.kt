@@ -1,8 +1,8 @@
 package dev.yuua.fortune
 
 import com.github.ajalt.clikt.core.CliktCommand
-import com.kotlindiscord.kord.extensions.ExtensibleBot
-import com.kotlindiscord.kord.extensions.commands.application.ApplicationCommandRegistry
+import dev.kordex.core.ExtensibleBot
+import dev.kordex.core.commands.application.ApplicationCommandRegistry
 import com.sksamuel.hoplite.ConfigLoaderBuilder
 import com.sksamuel.hoplite.yaml.YamlPropertySource
 import dev.yuua.fortune.discord.commands.CharacterCommand
