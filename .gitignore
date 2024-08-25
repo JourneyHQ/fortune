@@ -7,6 +7,7 @@ config/
 data/
 logs/
 mongodb/
+config.yml
 
 ### IntelliJ IDEA ###
 .idea/modules.xml

@@ -7,6 +7,10 @@ plugins {
 
 group = "dev.yuua"
 
+tasks.shadowJar {
+    archiveBaseName.set("fortune")
+}
+
 repositories {
     mavenCentral()
     maven("https://jitpack.io/")

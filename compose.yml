@@ -3,6 +3,6 @@ services:
     build: .
     volumes:
       - ./data:/app/data
-      - ./config:/app/config
+      - ./config.yml:/app/config.yml
     init: true
     restart: always

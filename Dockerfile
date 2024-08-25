@@ -25,7 +25,7 @@ RUN apk add --update --no-cache tzdata && \
     echo "Asia/Tokyo" > /etc/timezone && \
     apk del tzdata
 
-COPY --from=builder /build/build/libs/fortune.jar /app/fortune.jar
+COPY --from=builder /build/build/libs/fortune-all.jar /app/fortune.jar
 
 ENV TZ Asia/Tokyo
 

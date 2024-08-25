@@ -21,7 +21,7 @@ class Main : CliktCommand() {
         logger.info { "Starting Fortune..." }
 
         val config = ConfigLoaderBuilder.default()
-            .addSource(YamlPropertySource(File("./config/config.yml").readText()))
+            .addSource(YamlPropertySource(File("./config.yml").readText()))
             .build()
             .loadConfigOrThrow<Config>()
 
@@ -54,11 +54,21 @@ class Main : CliktCommand() {
                 runBlocking {
                     val registry = bot.getKoin().get<ApplicationCommandRegistry>()
 
-                    bot.extensions.forEach { (_, extension) ->
-                        extension.slashCommands.forEach { registry.unregisterGeneric(it) }
+                    val commands = bot.extensions.flatMap { (_, extension) ->
+                        extension.slashCommands.map {
+                            registry.unregisterGeneric(it)
+                            it.name
+                        }
                     }
 
-                    bot.close()
+                    println("Unregistered ${commands.size} commands:")
+                    println(commands.joinToString())
+
+                    try {
+                        bot.stop()
+                    } catch (_: IllegalStateException) {
+                        // Ignore
+                    }
 
                     println("Clean Discord bot complete.")
                 }
@@ -68,8 +78,6 @@ class Main : CliktCommand() {
 
             bot.start()
         }
-
-
     }
 }
 
