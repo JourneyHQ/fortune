@@ -1,12 +1,12 @@
 package dev.yuua.fortune.discord.events
 
+import dev.kord.core.behavior.reply
+import dev.kord.core.event.message.MessageCreateEvent
 import dev.kordex.core.checks.isNotBot
 import dev.kordex.core.extensions.Extension
 import dev.kordex.core.extensions.event
 import dev.kordex.core.utils.dm
 import dev.kordex.core.utils.getJumpUrl
-import dev.kord.core.behavior.reply
-import dev.kord.core.event.message.MessageCreateEvent
 import dev.yuua.fortune.Fortune
 import dev.yuua.fortune.bcdice.BCDiceAPI
 import dev.yuua.fortune.ccfolia.CharacterData
@@ -31,6 +31,12 @@ class RollMessageEvent : Extension() {
                 }
 
                 val content = message.content
+
+                if (content.isBlank()) {
+                    fail()
+                    return@check
+                }
+
                 val dice = content.split(" ", limit = 2).first()
 
                 val shouldRoll = info.getRegex().containsMatchIn(dice) ||
